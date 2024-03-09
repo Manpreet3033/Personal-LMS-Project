@@ -12,6 +12,7 @@ exports.signup = async (req, res) => {
       lastName,
       username,
       gender,
+      accountType,
       email,
       password,
       confirmPassword,
@@ -21,6 +22,7 @@ exports.signup = async (req, res) => {
       !firstName ||
       !lastName ||
       !username ||
+      !accountType ||
       !gender ||
       !email ||
       !password ||
@@ -58,7 +60,7 @@ exports.signup = async (req, res) => {
     if (!latestOTP || otp !== latestOTP.otp) {
       return res.status(422).json({
         success: false,
-        error: "The Otp is  invalid.",
+        error: "The Otp is invalid.",
       });
     }
 
@@ -70,6 +72,7 @@ exports.signup = async (req, res) => {
       gender: gender,
       email: email,
       password: hashedPassword,
+      accountType: accountType,
     });
     return res.status(200).json({
       success: true,

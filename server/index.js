@@ -1,7 +1,6 @@
 const express = require('express')
 const database = require('./config/database')
 const cookieParser = require('cookie-parser')
-const Message = require('./models/Conversation')
 const authRoutes = require('./routes/AuthRoutes')
 const cors = require('cors')
 const app = express()

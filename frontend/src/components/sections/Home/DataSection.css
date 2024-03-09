@@ -1,0 +1,5 @@
+@media screen and (max-width: 959px) {
+    .data{
+        flex-direction: column;
+    }
+}

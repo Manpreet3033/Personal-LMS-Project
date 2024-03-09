@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { sendOtp, signUp } from '../../operations/authApi';
+import { sendOtp, signUp } from '../operations/authApi';
 import OtpInput from "react-otp-input";
 import './VerifyEmail.css'
 
@@ -25,6 +25,7 @@ const VerifyEmail = () => {
             firstName,
             lastName,
             username,
+            role,
             gender,
             email,
             password,
@@ -36,6 +37,7 @@ const VerifyEmail = () => {
                 lastName,
                 username,
                 gender,
+                role,
                 email,
                 password,
                 confirmPassword,
@@ -46,7 +48,7 @@ const VerifyEmail = () => {
     }
 
   return (
-    <div className='otp-input-container'>
+    <div className='otp-input-container bg-deep-blue'>
       <h1 className='title-verify'>Verify Email</h1>
       <h3 className='title-verify'>An otp has been sent to your mail. Please enter it below to procedd further.</h3>
       <OtpInput

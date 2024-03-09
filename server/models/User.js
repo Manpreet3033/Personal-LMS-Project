@@ -15,6 +15,11 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    accountType: {
+			type: String,
+			enum: ["Admin", "Student", "Instructor"],
+			required: true,
+		},
     gender: {
       type: String,
       required: true,
@@ -32,9 +37,15 @@ const UserSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+    courses: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Course",
+      },
+    ],
     token: {
       type: String,
-    }
+    },
   },
   { timestamps: true }
 );

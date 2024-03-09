@@ -1,13 +1,12 @@
 .otp-input{
     width: 60px;
     border: 0;
-    background-color: rgb(133, 76, 218);
+    background-color: rgb(66, 66, 144);
     border-radius: 0.5rem;
     color: #F1F2FF;
     text-align: center;
 }
 .otp-input-container{
-    background-color: rgb(62, 1, 154);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +21,8 @@
     padding-bottom: 30px;
 }
 .verifyBtn{
-    width: 100px;
-    background-color: #FFD60A;
+    width: 130px;
+    background-color: white;
     padding: 12px;
     border-radius: 8px;
     margin-top: 40px;
